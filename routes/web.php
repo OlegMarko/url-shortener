@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ShorterController@index');
+
+Route::post('/short-url/make', 'ShorterController@make');
+Route::get('/{code}', 'ShorterController@get');
